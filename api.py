@@ -82,8 +82,8 @@ async def chat(request: Request):
 
 
 if __name__ == '__main__':
-    # tokenizer = AutoTokenizer.from_pretrained("model", trust_remote_code=True)
-    # model = AutoModel.from_pretrained("model", trust_remote_code=True).half().cuda()
-    # # model = AutoModel.from_pretrained("model", trust_remote_code=True).float()
-    # model.eval()
+    tokenizer = AutoTokenizer.from_pretrained("model", trust_remote_code=True)
+    model = AutoModel.from_pretrained("model", trust_remote_code=True).half().cuda()
+    # model = AutoModel.from_pretrained("model", trust_remote_code=True).float()
+    model.eval()
     uvicorn.run(app, host='0.0.0.0', port=8000, workers=1)
