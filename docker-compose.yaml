@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ChatGLM-6B-bibliothecarius:
+    image: "python:3.9-buster"
+    volumes:
+      - ./api.py:/app/main.py
+      - ./model:/app/model
+      - ./requirements.txt:/app/requirements.txt
+      - ./run.sh:/app/run.sh
+    ports:
+      - "8001:8001"
+    command: bash /app/run.sh
