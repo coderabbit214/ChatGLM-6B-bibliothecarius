@@ -8,5 +8,5 @@ services:
       - ./requirements.txt:/app/requirements.txt
       - ./run.sh:/app/run.sh
     ports:
-      - "8001:8001"
+      - "8000:8000"
     command: bash /app/run.sh
